@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
@@ -13,9 +13,7 @@ const Layout = () => {
   return (
     <div className='layout'>
       <>
-      
-        <Router>
-          <Routes>
+          <Routes>git
             <Route element={<Home />} path='/'/>
             <Route element={<About />} path='/about-us'/>
             <Route element={<Contact />} path='/contact'/>
@@ -25,7 +23,6 @@ const Layout = () => {
             <Route element={<Pricing />} path='/pricing'/>
             <Route element={<Login />} path='/login'/>
           </Routes>
-        </Router>
       </>
     </div>
   )

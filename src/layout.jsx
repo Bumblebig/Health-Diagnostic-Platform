@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
@@ -13,16 +13,17 @@ const Layout = () => {
   return (
     <div className='layout'>
       <>
+      
         <Router>
           <Routes>
-            <Route Component={<Home />} path='/'/>
-            <Route Component={<About />} path='/about-us'/>
-            <Route Component={<Contact />} path='/contact'/>
-            <Route Component={<Dashboard />} path='/dashboard'/>
-            <Route Component={<Product />} path='/product'/>
-            <Route Component={<Features />} path='/features'/>
-            <Route Component={<Pricing />} path='/pricing'/>
-            <Route Component={<Login />} path='/login'/>
+            <Route element={<Home />} path='/'/>
+            <Route element={<About />} path='/about-us'/>
+            <Route element={<Contact />} path='/contact'/>
+            <Route element={<Dashboard />} path='/dashboard'/>
+            <Route element={<Product />} path='/product'/>
+            <Route element={<Features />} path='/features'/>
+            <Route element={<Pricing />} path='/pricing'/>
+            <Route element={<Login />} path='/login'/>
           </Routes>
         </Router>
       </>

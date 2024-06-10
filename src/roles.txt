@@ -1,0 +1,3 @@
+Ayodeji - Dashboard, Auth, About
+Abdulrahman - Home, Pricing, Dashboard 
+Yusuf - Product, Contact, Features

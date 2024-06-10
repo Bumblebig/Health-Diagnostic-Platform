@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <div className='layout'>
       <>
-          <Routes>git
+          <Routes>
             <Route element={<Home />} path='/'/>
             <Route element={<About />} path='/about-us'/>
             <Route element={<Contact />} path='/contact'/>

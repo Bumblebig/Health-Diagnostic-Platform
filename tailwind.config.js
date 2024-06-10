@@ -13,7 +13,7 @@ export default {
       colors: {
         "primary": "#002626",
         "secondary": "#538c61",
-        "alt": "#94b8e4",
+        "alt": "#94b8e4"
       }
     },
   },

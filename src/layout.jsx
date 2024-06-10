@@ -8,6 +8,7 @@ import Product from "./pages/product/Product";
 import Features from "./pages/features/Features";
 import Pricing from "./pages/pricing/Pricing";
 import Login from "./pages/auth/Login";
+import Button from "./components/ui/Button";
 
 const Layout = () => {
   return (
@@ -23,6 +24,11 @@ const Layout = () => {
           <Route element={<Pricing />} path="/pricing" />
           <Route element={<Login />} path="/login" />
         </Routes>
+      <Button size={'btn-small'} variant={'btn-primary'}>Hello</Button>
+      <Button size={'btn-small'} variant={'btn-secondary'}>Hello</Button>
+      <Button size={'btn-big'} variant={'btn-primary'}>Hello</Button>
+      <Button size={'btn-big'} variant={'btn-secondary'}>Hello</Button>
+
       </>
     </div>
   );

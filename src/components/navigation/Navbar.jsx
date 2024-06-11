@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // Toggle navigation on and off
   const toggleNav = function () {
@@ -10,16 +11,31 @@ const Navbar = () => {
   }
 
   const turnOffNav = function () {
-    setNav(prev => {
-      prev = false;
-    })
+    setNav(false)
   }
+
+  // Toggle off mobile nav if windows size is desktop
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+
+      // close nav if window is greater
+      if (window.innerWidth > 767) turnOffNav();
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    };
+  }, [])
+
   return (
-    <header className={`w-full transition h-auto duration-200 p-4 lg:px-6 overflow-hidden ${!nav && "bg-primary text-gray-50"}`}>
+    <header className={`w-full transition h-auto duration-200 p-4 lg:px-6 overflow-hidden ${nav ? "bg-white" : "bg-primary text-gray-50"} fixed top-0 left-0 z-50`}>
 
       {/* Desktop Nav */}
       <nav className="list-none flex justify-between items-center transition-all duration-100">
-        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">LOGO</Link></li>
+        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">HAVVA</Link></li>
 
         {/* Hamburger Icon */}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-7 cursor-pointer md:hidden ${nav && "hidden"}`} onClick={toggleNav}>
@@ -27,7 +43,7 @@ const Navbar = () => {
         </svg>
 
         {/* Cancel Icon */}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-7 cursor-pointer ${nav ? "block" : "hidden"}`} onClick={toggleNav}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-7 cursor-pointer md:hidden ${nav ? "block" : "hidden"}`} onClick={toggleNav}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
 

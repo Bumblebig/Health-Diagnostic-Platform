@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Login.scss";
 import LoginForm from "./components/LoginForm";
 import Providers from "./components/Providers";
+import SignupForm from "./components/SignupForm";
 
 const Login = () => {
   const [mode, setMode] = useState("signin");
@@ -24,7 +25,7 @@ const Login = () => {
             {mode === "signin" ? (
               <LoginForm email={email} setEmail={setEmail} />
             ) : (
-              <LoginForm email={email} setEmail={setEmail} />
+              <SignupForm email={email} setEmail={setEmail} />
             )}
             <Providers />
           </div>

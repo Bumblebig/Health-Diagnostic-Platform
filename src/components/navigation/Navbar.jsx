@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <nav className="list-none flex justify-between items-center transition-all duration-100">
-        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">LOGO</Link></li>
+        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">HAVVA</Link></li>
 
         {/* Hamburger Icon */}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-7 cursor-pointer md:hidden ${nav && "hidden"}`} onClick={toggleNav}>

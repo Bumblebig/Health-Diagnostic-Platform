@@ -4,7 +4,7 @@ import Navbar from './components/navigation/Navbar';
 function App() {
 
   return (
-    <div className='app font-body'>
+    <div className='app font-body relative w-full'>
       <Navbar />
       <Layout />
     </div>

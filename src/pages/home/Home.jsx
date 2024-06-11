@@ -1,6 +1,8 @@
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className="w-full">
+      <div>Home</div>
+    </section>
   )
 }
 

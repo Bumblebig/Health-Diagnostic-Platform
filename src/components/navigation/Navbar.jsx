@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <nav className="list-none flex justify-between items-center transition-all duration-100">
-        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">HAVVA</Link></li>
+        <li className="text-2xl font-semibold cursor-pointer lg:text-3xl" onClick={turnOffNav}><Link to="/">HAVA</Link></li>
 
         {/* Hamburger Icon */}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`size-7 cursor-pointer md:hidden ${nav && "hidden"}`} onClick={toggleNav}>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/features" className="cursor-pointer hover:text-alt">Features</Link>
           <Link to="pricing" className="cursor-pointer hover:text-alt">Pricing</Link>
           <Link to="contact" className="cursor-pointer hover:text-alt">Contact</Link>
-          <Link to="login" className="cursor-pointer inline-block border border-white hover:bg-secondary px-4 py-1 rounded focus:outline-none transition duration-100 ease-in hover:border-none">Sign In</Link>
+          <Link to="login" className="cursor-pointer inline-block border border-white hover:bg-secondary px-4 py-1 rounded focus:outline-none transition duration-100 ease-in hover:border-transparent">Sign In</Link>
         </div>
       </nav>
 

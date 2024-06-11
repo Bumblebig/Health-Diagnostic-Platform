@@ -2,7 +2,7 @@ import Hero from "./components/Hero";
 
 const Home = () => {
   return (
-    <section className="w-full pt-20">
+    <section className="w-full">
       <Hero />
     </section>
   )

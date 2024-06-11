@@ -1,21 +1,55 @@
-import { Link } from "react-router-dom";
-const Footer = () => {
-    return <footer className="mt-20 border-t py-10 border-neutral-700 list-none bg-primary text-gray-50 p-4 flex justify-between items-center lg:px-6">
-            <div>
-                <ul>
-                <li className="cursor-pointer hover:text-alt font-semibold mb-4"><Link to="/about-us">About</Link></li>            
-                <li className="cursor-pointer hover:text-alt font-semibold mb-4"><Link to="/features">Features</Link></li>
-                <h3 className="cursor-pointer hover:text-alt font-semibold mb-4"><Link to="pricing">Pricing</Link></h3>           
-                <h4 className="cursor-pointer hover:text-alt font-semibold mb-4"><Link to="contact">Contact</Link></h4>
-                <h5 className="cursor-pointer hover:text-alt font-semibold mb-4"><Link to="/product">Product</Link></h5>
-               </ul>
-            </div>
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-            <div className="copyright">
-            <h7 className="text-2xl font-semibold mb-4 cursor-pointer  "><Link to="/">LOGO</Link></h7>
-          <p>&copy; [2024] [Mcgeorge consulting]. All Rights Reserved.</p>
-        </div>   
-     </footer>
-  }
-  
-  export default Footer;
+const Footer = () => {
+  return (
+    <footer className="bg-[#002626] text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap justify-between items-center">
+          {/* Company Logo */}
+          <div className="w-full md:w-1/4 mb-6 md:mb-0">
+            <img src="path/to/logo.png" alt="Company Logo" className="h-16" />
+          </div>
+
+          {/* Links */}
+          <div className="w-full md:w-3/4 flex justify-around">
+            <div className="flex flex-col">
+              <span className="cursor-pointer hover:text-[#00FF00] font-semibold mb-4">
+                <Link to="/about-us">About Us</Link>
+              </span>
+              <span className="cursor-pointer hover:text-[#00FF00] font-semibold mb-4">
+                <Link to="/product">Product</Link>
+              </span>
+              <span className="cursor-pointer hover:text-[#00FF00] font-semibold mb-4">
+                <Link to="/pricing">Pricing</Link>
+              </span>
+              <span className="cursor-pointer hover:text-[#00FF00] font-semibold mb-4">
+                <Link to="/contact">Contact</Link>
+              </span>
+              <span className="cursor-pointer hover:text-[#00FF00] font-semibold mb-4">
+                <Link to="/features">Features</Link>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
+          {/* Social Media Icons */}
+          <div className="flex space-x-4">
+            <a href="https://facebook.com" className="hover:text-[#00FF00]">Facebook</a>
+            <a href="https://twitter.com" className="hover:text-[#00FF00]">Twitter</a>
+            <a href="https://linkedin.com" className="hover:text-[#00FF00]">LinkedIn</a>
+            <a href="https://instagram.com" className="hover:text-[#00FF00]">Instagram</a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center">
+            © 2024 Mcgeorge Consulting. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

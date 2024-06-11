@@ -6,7 +6,7 @@
 
 @layer components {
     .btn {
-      @apply px-4 py-2 rounded-lg font-semibold focus:outline-none transition duration-300 ease-in-out;
+      @apply px-4 py-2 rounded-lg font-semibold focus:outline-none transition duration-300 ease-in-out cursor-pointer;
     }
     
     .btn-primary {
@@ -14,7 +14,7 @@
     }
   
     .btn-secondary {
-      @apply bg-secondary text-white hover:bg-primary text-white;
+      @apply bg-secondary hover:bg-primary text-white;
     }
   
     .btn-danger {

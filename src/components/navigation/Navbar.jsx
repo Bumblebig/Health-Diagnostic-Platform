@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <header className={`w-full transition h-auto duration-200 p-4 lg:px-6 overflow-hidden ${!nav && "bg-primary text-gray-50"}`}>
+    <header className={`w-full transition h-auto duration-200 p-4 lg:px-6 overflow-hidden ${nav ? "bg-white" : "bg-primary text-gray-50"} fixed top-0 left-0 z-50`}>
 
       {/* Desktop Nav */}
       <nav className="list-none flex justify-between items-center transition-all duration-100">

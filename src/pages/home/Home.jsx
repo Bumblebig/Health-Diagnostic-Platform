@@ -1,9 +1,10 @@
-import Hero from "./components/Hero";
+import { Hero, Features } from "./components";
 
 const Home = () => {
   return (
     <section className="w-full">
       <Hero />
+      <Features />
     </section>
   )
 }

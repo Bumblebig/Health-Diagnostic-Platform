@@ -7,17 +7,16 @@ const Providers = () => {
       url: "",
     },
     {
-      icon: "",
-      url: "",
-    },
-    {
-      icon: "",
+      icon: "https://pngimg.com/d/apple_logo_PNG19688.png",
       url: "",
     }
   ];
 
   return (
     <div className="login-providers">
+        
+        <p>Or Continue with</p>
+        
       <div className="wrapper">
         {
             providers.map((provider, i) => {

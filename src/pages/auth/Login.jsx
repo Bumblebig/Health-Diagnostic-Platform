@@ -15,11 +15,17 @@ const Login = () => {
           <div className="login-form-content">
             <h1 className="logo block text-center text-4xl font-bold">LOGO</h1>
             <div className="content-text w-fit block">
-              <h1 className={"text-center text-3xl text-primary font-semibold"}>Welcome Back!</h1>
+              <h1 className={"text-center text-3xl text-primary font-semibold"}>
+                Welcome Back!
+              </h1>
               <p className={"text-center"}>Please enter your Login details.</p>
               <ModeSwitch mode={mode} setMode={setMode} />
             </div>
-            <LoginForm email={email} setEmail={setEmail} />
+            {mode === "signin" ? (
+              <LoginForm email={email} setEmail={setEmail} />
+            ) : (
+              <LoginForm email={email} setEmail={setEmail} />
+            )}
             <Providers />
           </div>
         </div>

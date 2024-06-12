@@ -14,6 +14,15 @@ export default {
         "primary": "#002626",
         "secondary": "#538c61",
         "alt": "#94e8b4",
+      },
+      maxWidth: {
+        "custom": "2000px"
+      },
+      width: {
+        "custom": "600px"
+      },
+      height: {
+        "custom": "400px"
       }
     },
   },

@@ -1,5 +1,5 @@
-import { featuredItem } from ".";
-import FeaturedItem from "./FeaturedItem";
+import { FeaturedItem } from ".";
+
 export default function Features() {
     return (
         <section className="py-12 px-4 w-full mx-auto max-w-7xl md:w-4/5 md:mx-auto lg:w-11/12 lg:py-16">

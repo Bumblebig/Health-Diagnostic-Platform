@@ -16,7 +16,7 @@ export default function Features() {
                 </figure>
 
                 <figure className="lg:flex lg:gap-8 lg:flex-row xl:gap-14">
-                    <div className="lg:order-2 w-2/5">
+                    <div className="lg:order-2 lg:w-2/5">
                         <FeaturedItem
                             key='2'
                             headline="Multi-User Profiles Perfect for Families"
@@ -36,7 +36,7 @@ export default function Features() {
                 </figure>
 
                 <figure className="lg:flex lg:gap-8 lg:flex-row xl:gap-14">
-                    <div className="lg:order-2 w-2/5">
+                    <div className="lg:order-2 lg:w-2/5">
                         <FeaturedItem
                             key='4'
                             headline="Data Sharing"

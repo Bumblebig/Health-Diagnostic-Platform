@@ -1,10 +1,11 @@
-import { Hero, Features } from "./components";
+import { Hero, Features, AISection } from "./components";
 
 const Home = () => {
   return (
     <section className="w-full">
       <Hero />
       <Features />
+      <AISection />
     </section>
   )
 }

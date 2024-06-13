@@ -13,7 +13,7 @@ export default function Hero() {
 
                     <div className="mt-6 flex items-center gap-4 lg:mt-8 lg:gap-5">
                         <Link to="/about-us" className="text-sm border rounded inline-block px-3 py-2 hover:border-transparent hover:bg-white hover:text-primary transition-all lg:text-base">Learn More &rarr;</Link>
-                        <Link to="/login" className="text-sm inline-block px-3 py-2 bg-alt text-primary rounded hover:bg-secondary transition-all lg:text-base">Get Started &rarr;</Link>
+                        <Link to="/login" className="text-sm inline-block px-3 py-2 bg-alt text-primary rounded hover:bg-[#94e8b4ca] transition-all lg:text-base">Get Started &rarr;</Link>
                     </div>
                 </div>
                 <div className="w-full mt-10 lg:w-2/3 xl:w-1/2 xl:max-w-4xl">

@@ -9,7 +9,7 @@ export default function CTA() {
             </video>
 
             <div className="w-4/5 bg-white mx-auto py-8 px-8">
-                <h2 className="text-center text-primary font-semibold text-lg">Ready to Take Control of Your Health?</h2>
+                <h2 className="text-primary font-semibold text-lg">Ready to Take Control of Your Health?</h2>
 
                 <p className="text-sm mt-5 leading-normal">Join thousands of others who are monitoring their health in real-time with our Health Diagnostic Device.
                     Stay informed, stay healthy, and share your data with those who matter.</p>

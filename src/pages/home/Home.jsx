@@ -1,4 +1,4 @@
-import { Hero, Features, AISection } from "./components";
+import { Hero, Features, AISection, CTA } from "./components";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <Hero />
       <Features />
       <AISection />
+      <CTA />
     </section>
   )
 }

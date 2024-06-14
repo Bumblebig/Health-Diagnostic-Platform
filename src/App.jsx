@@ -5,7 +5,7 @@ import Footer from './components/navigation/Footer';
 function App() {
 
   return (
-    <div className='app font-body relative w-full'>
+    <div className='app font-body relative w-full transition-all'>
       <Navbar />
       <Layout />
       <Footer />

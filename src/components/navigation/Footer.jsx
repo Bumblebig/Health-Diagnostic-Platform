@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center justify-center gap-2  w-full md:w-auto">
           <Link to="/privacy" className="hover:text-alt text-sm">Privacy policy</Link>
-          <h9>|</h9>
+          <h6>|</h6>
           <Link to="/terms" className="hover:text-alt text-sm">Terms of use</Link>
         </div>
       </div>

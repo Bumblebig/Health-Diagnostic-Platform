@@ -1,5 +1,7 @@
-  header:has(+ .layout .login-container) {
+.app:has(.layout .login-container){
+  header, footer{
     display: none;
+  }
 }
 
 .login-container {

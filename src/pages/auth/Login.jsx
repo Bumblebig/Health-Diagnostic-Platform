@@ -16,10 +16,33 @@ const Login = () => {
           <div className="login-form-content">
             <h1 className="logo block text-center text-4xl font-bold">HAVVA</h1>
             <form className="content-text w-fit block">
-              <h1 className={"text-center text-3xl text-primary font-semibold"}>
-                Welcome Back!
-              </h1>
-              <p className={"text-center"}>Please enter your Login details.</p>
+              {mode === "signin" ? (
+                <>
+                  <h1
+                    className={
+                      "text-center text-3xl text-primary font-semibold"
+                    }
+                  >
+                    Welcome Back!
+                  </h1>
+                  <p className={"text-center"}>
+                    Please enter your Login details.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h1
+                    className={
+                      "text-center text-3xl text-primary font-semibold"
+                    }
+                  >
+                    Welcome!
+                  </h1>
+                  <p className={"text-center"}>
+                    Please enter your details to get started.
+                  </p>
+                </>
+              )}
               <ModeSwitch mode={mode} setMode={setMode} />
             </form>
             {mode === "signin" ? (

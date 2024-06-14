@@ -4,7 +4,7 @@ import { Home, About, Contact, Dashboard, Product, Features, Pricing, Login } fr
 
 const Layout = () => {
   return (
-    <div className="layout">
+    <div className="layout transition-all">
       <>
         <Routes>
           <Route element={<Home />} path="/" />

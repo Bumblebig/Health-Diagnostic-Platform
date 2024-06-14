@@ -7,11 +7,11 @@ export default function Pricing() {
   return (
     <section className="py-24 pt-32 px-8 w-full transition-all">
       <div className="text-center">
-        <h1 className="text-2xl font-semibold mb-3 text-secondary">Choose Your Plan</h1>
-        <p className="mx-w-[600px] text-lg text-gray-800">Find the perfect plan for your health monitoring needs.</p>
+        <h1 className="text-2xl font-semibold mb-3 text-secondary lg:text-3xl xl:mb-5">Choose Your Plan</h1>
+        <p className="mx-w-[600px] text-lg text-gray-800 xl:text-xl">Find the perfect plan for your health monitoring needs.</p>
       </div>
 
-      <div className="flex flex-col items-center gap-10 mt-12">
+      <div className="flex flex-col items-center gap-10 mt-12 lg:flex-row lg:items-start lg:justify-center lg:mt-20 xl:mt-24">
         <PriceCard
           type="Free Plan"
           price="0"

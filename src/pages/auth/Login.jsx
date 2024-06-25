@@ -1,13 +1,33 @@
 import ModeSwitch from "./components/ModeSwitch";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Login.scss";
 import LoginForm from "./components/LoginForm";
 import Providers from "./components/Providers";
 import SignupForm from "./components/SignupForm";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { Context } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [mode, setMode] = useState("signin");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = getAuth();
+  const { setUser } = useContext(Context);
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        setUser(user);
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleSignUp = async () => {};
 
   return (
     <div className="login-container">
@@ -15,7 +35,7 @@ const Login = () => {
         <div className="login-form">
           <div className="login-form-content">
             <h1 className="logo block text-center text-4xl font-bold">HAVVA</h1>
-            <form className="content-text w-fit block">
+            <div className="content-text w-fit block">
               {mode === "signin" ? (
                 <>
                   <h1
@@ -44,11 +64,23 @@ const Login = () => {
                 </>
               )}
               <ModeSwitch mode={mode} setMode={setMode} />
-            </form>
+            </div>
             {mode === "signin" ? (
-              <LoginForm email={email} setEmail={setEmail} />
+              <LoginForm
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                handleLogin={handleLogin}
+              />
             ) : (
-              <SignupForm email={email} setEmail={setEmail} />
+              <SignupForm
+                email={email}
+                setEmail={setEmail}
+                handleSignUp={handleSignUp}
+                password={password}
+                setPassword={setPassword}
+              />
             )}
             <Providers />
           </div>

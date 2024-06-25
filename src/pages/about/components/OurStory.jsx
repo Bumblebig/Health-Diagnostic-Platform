@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 const OurStory = () => {
   return (
     <section className="story row-2">
       <div className="text">
         <h1 className="title">This is Our Story</h1>
-        <p className="description">
+        <div className="description">
           <h2 className="subtitle">
             We're a team of like-minded individuals seeking to better the world
             through Innovation
@@ -15,7 +16,7 @@ const OurStory = () => {
           elit. Eius, modi? Repellat, rerum necessitatibus fugit soluta quis
           assumenda minus eos tenetur esse in ducimus placeat laboriosam
           officiis. Inventore recusandae voluptates tempora.
-        </p>
+        </div>
       </div>
     </section>
   );

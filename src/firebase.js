@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBeJRMle-EtTcQRbSJiyK7B34ZeaeIeJlA",
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxx",
   authDomain: "golfproject-10d9b.firebaseapp.com",
   databaseURL: "https://golfproject-10d9b-default-rtdb.firebaseio.com",
   projectId: "golfproject-10d9b",

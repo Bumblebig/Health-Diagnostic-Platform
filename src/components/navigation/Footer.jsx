@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
+  const curDate = new Date().getFullYear();
   return (
     <footer className="bg-primary text-white pt-12 lg:pt-20">
       <div className="flex flex-wrap justify-center mx-auto px-4 md:mx-0 md:justify-between items-start md:w-full md:px-8 lg:px-10">
@@ -66,7 +67,7 @@ const Footer = () => {
 
       <div className=" flex flex-wrap justify-center mt-8 pb-10 md:justify-between md:px-6 md:mt-20">
         <div className="text-center w-full text-sm md:w-auto mb-4 md:mb-0">
-          © 2024 Mcgeorge Consulting. All Rights Reserved.
+          © {curDate} Mcgeorge Consulting. All Rights Reserved.
         </div>
         <div className="flex items-center justify-center gap-2  w-full md:w-auto">
           <Link to="/privacy" className="hover:text-alt text-sm">Privacy policy</Link>
